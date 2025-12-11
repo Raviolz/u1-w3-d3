@@ -12,4 +12,11 @@ function addTask() {
 
   list.appendChild(li);
   input.value = "";
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "X";
+  li.appendChild(deleteBtn);
+  deleteBtn.addEventListener("click", function () {
+    li.remove();
+  });
 }
