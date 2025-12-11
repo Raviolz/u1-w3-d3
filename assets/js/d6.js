@@ -1,3 +1,15 @@
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 const list = document.querySelector("ul");
+
+function addTask() {
+  const li = document.createElement("li");
+  li.innerText = input.value;
+
+  li.addEventListener("click", function () {
+    li.style.textDecoration = "line-through";
+  });
+
+  list.appendChild(li);
+  input.value = "";
+}
